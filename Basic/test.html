@@ -1,0 +1,560 @@
+<style>
+    .landing-page {
+      background: var(--colour-secondary-white-100-general, #fff);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    
+    .main-wrapper {
+      align-self: end;
+      display: flex;
+      width: 100%;
+      max-width: 1279px;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .header-section {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 0;
+    }
+    
+    .nav-container {
+      gap: 20px;
+      display: flex;
+    }
+    
+    .nav-left {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 58%;
+    }
+    
+    .nav-content {
+      display: flex;
+      margin: 18px 0 0;
+      flex-direction: column;
+      padding: 0 20px;
+    }
+    
+    .nav-links {
+      align-self: start;
+      display: flex;
+      width: 422px;
+      max-width: 100%;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    
+    .nav-link {
+      font-feature-settings: "liga" off, "clig" off;
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .hero-title {
+      font-feature-settings: "liga" off, "clig" off;
+      font-size: 50px;
+      line-height: 66px;
+      letter-spacing: 1px;
+      text-align: left;
+      align-self: start;
+      margin: 145px 0 0;
+      max-width: 573px;
+    }
+    
+    .hero-description {
+      color: var(--Colour-Main-Blue-500, #505f98);
+      font-feature-settings: "liga" off, "clig" off;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      margin: 14px 0 37px;
+    }
+    
+    .cta-button {
+      all: unset;
+      appearance: none;
+      background-color: black;
+      color: white;
+      border-radius: 4px;
+      text-align: center;
+      cursor: pointer;
+      align-self: stretch;
+      height: 49px;
+      margin: 0 auto;
+      padding: 15px 20px;
+    }
+    
+    .nav-right {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 42%;
+      margin-left: 20px;
+    }
+    
+    .hero-image-container {
+      fill: var(--Colour-Main-Blue-100, #e7ecff);
+      overflow: hidden;
+      padding-bottom: 50px;
+    }
+    
+    .hero-image-wrapper {
+      gap: 20px;
+      display: flex;
+    }
+    
+    .image-left {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 66%;
+    }
+    
+    .logo-wrapper {
+      display: flex;
+      flex-direction: column;
+      color: var(--Colour-Logo-Primary, #37447e);
+      font-feature-settings: "liga" off, "clig" off;
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1;
+      position: relative;
+      border-radius: 0;
+      flex-grow: 1;
+      aspect-ratio: 0.319;
+      margin-top: -160px;
+      padding: 172px 60px 761px 84px;
+    }
+    
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: center;
+      alt: "Hero section decorative image";
+    }
+    
+    .image-right {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 34%;
+      margin-left: 20px;
+    }
+    
+    .buy-button {
+      font-feature-settings: "liga" off, "clig" off;
+      border-radius: 2px;
+      background: var(--Colour-Main-Blue-800, #111b47);
+      font-size: 12px;
+      color: var(--colour-secondary-white-100-general, #fff);
+      font-weight: 500;
+      text-align: center;
+      margin-top: 20px;
+      width: 100%;
+      padding: 4px 57px;
+    }
+    
+    /* Features Section Styles */
+    .features-section {
+      align-self: start;
+      margin: 108px 0 0;
+      width: 100%;
+      max-width: 1110px;
+    }
+    
+    .features-container {
+      gap: 20px;
+      display: flex;
+    }
+    
+    .features-content {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 50%;
+    }
+    
+    .features-wrapper {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    
+    .features-title {
+      color: var(--Colour-Main-Blue-900, #091133);
+      font-feature-settings: "liga" off, "clig" off;
+      align-self: start;
+      font: 500 36px/1 Roboto, sans-serif;
+    }
+    
+    .features-description {
+      color: var(--Colour-Main-Blue-400, #6f7cb2);
+      font-feature-settings: "liga" off, "clig" off;
+      margin-top: 16px;
+      font: 400 16px/26px Roboto, sans-serif;
+    }
+    
+    .features-grid {
+      margin-top: 80px;
+    }
+    
+    .grid-row {
+      gap: 20px;
+      display: flex;
+    }
+    
+    .grid-item {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      align-items: start;
+      font-family: Roboto, sans-serif;
+    }
+    
+    .feature-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 36px;
+      alt: "Feature icon";
+    }
+    
+    .feature-title {
+      color: var(--Colour-Main-Blue-900, #091133);
+      font-feature-settings: "liga" off, "clig" off;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 2;
+      margin-top: 14px;
+    }
+    
+    .feature-description {
+      color: var(--Colour-Main-Grey-600, #5d6970);
+      font-feature-settings: "liga" off, "clig" off;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      align-self: stretch;
+      margin-top: 6px;
+    }
+    
+    .features-image {
+      aspect-ratio: 1.03;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      flex-grow: 1;
+      alt: "Features section illustration";
+    }
+    
+    /* Footer Styles */
+    .footer {
+      background-color: rgba(231, 236, 255, 1);
+      display: flex;
+      margin-top: 172px;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 61px 80px 32px;
+    }
+    
+    .footer-wrapper {
+      display: flex;
+      width: 100%;
+      max-width: 1110px;
+      flex-direction: column;
+    }
+    
+    .footer-top {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-family: Roboto, sans-serif;
+      font-weight: 500;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .copyright {
+      color: var(--Colour-Main-Grey-400, #939ea4);
+      font-feature-settings: "liga" off, "clig" off;
+      font-size: 14px;
+      line-height: 24px;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    
+    .footer-logo {
+      color: var(--Colour-Logo-Primary, #37447e);
+      font-feature-settings: "liga" off, "clig" off;
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1;
+      align-self: stretch;
+    }
+    
+    .footer-cta {
+      font-feature-settings: "liga" off, "clig" off;
+      border-radius: 2px;
+      background: var(--Colour-Main-Blue-800, #111b47);
+      align-self: stretch;
+      font-size: 12px;
+      color: var(--colour-secondary-white-100-general, #fff);
+      text-align: center;
+      margin: auto 0;
+      padding: 4px 17px;
+    }
+    
+    .footer-divider {
+      background-color: rgba(205, 209, 212, 1);
+      display: flex;
+      margin-top: 40px;
+      height: 1px;
+    }
+    
+    .footer-bottom {
+      display: flex;
+      margin-top: 20px;
+      width: 100%;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 40px 58px;
+      color: var(--Colour-Main-Blue-300, #929ecc);
+      font: 400 14px/24px Roboto, sans-serif;
+    }
+    
+    .footer-link {
+      font-feature-settings: "liga" off, "clig" off;
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 30px;
+      margin: auto 0;
+    }
+    
+    .social-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 16px;
+      alt: "Social media icon";
+    }
+    
+    @media (max-width: 991px) {
+      .main-wrapper,
+      .header-section,
+      .nav-content,
+      .hero-description,
+      .hero-image-container,
+      .features-section,
+      .features-description,
+      .features-grid,
+      .features-image,
+      .footer,
+      .footer-wrapper,
+      .footer-divider {
+        max-width: 100%;
+      }
+    
+      .nav-container,
+      .hero-image-wrapper,
+      .features-container,
+      .grid-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+    
+      .nav-left,
+      .nav-right,
+      .image-left,
+      .image-right,
+      .features-content {
+        width: 100%;
+        margin-left: 0;
+      }
+    
+      .nav-content,
+      .hero-image-container,
+      .features-wrapper,
+      .grid-item,
+      .features-image {
+        margin-top: 40px;
+      }
+    
+      .hero-title {
+        font-size: 40px;
+        line-height: 59px;
+      }
+    
+      .logo-wrapper {
+        margin-top: -134px;
+        padding: 40px 20px 40px 30px;
+      }
+    
+      .buy-button,
+      .footer-cta {
+        padding: 0 20px;
+      }
+    
+      .footer {
+        padding: 0 20px;
+      }
+    
+      .footer-links {
+        white-space: initial;
+      }
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    </style>
+    
+    <div class="landing-page">
+      <div class="main-wrapper">
+        <header class="header-section">
+          <nav class="nav-container">
+            <div class="nav-left">
+              <div class="nav-content">
+                <div class="nav-links">
+                  <a href="#home" class="nav-link">Home</a>
+                  <a href="#about" class="nav-link">About</a>
+                  <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <h1 class="hero-title">
+                  Introduce Your Product Quickly & Effectively
+                </h1>
+                <p class="hero-description">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                  commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                  penatibus et magnis dis parturient montes, nascetur ridiculus
+                  mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                  quis, sem. Nulla consequat massa quis enim.
+                </p>
+              </div>
+              <button class="cta-button">Purchase Now</button>
+            </div>
+            <div class="nav-right">
+              <div class="hero-image-container">
+                <div class="hero-image-wrapper">
+                  <div class="image-left">
+                    <div class="logo-wrapper">
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/05d00428eefa48b098f0ece6ea2955e6ea486bdbf91425b3e984d9b21972da07?placeholderIfAbsent=true&apiKey=d2796b4dc66740058c7029ff10552e35" class="hero-image" alt="Landing page hero image"/>
+                      Landing
+                    </div>
+                  </div>
+                  <div class="image-right">
+                    <button class="buy-button">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+    
+        <main>
+          <section class="features-section">
+            <div class="features-container">
+              <div class="features-content">
+                <div class="features-wrapper">
+                  <h2 class="features-title">Light, Fast & Powerful</h2>
+                  <p class="features-description">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                    penatibus et magnis dis parturient montes, nascetur ridiculus
+                    mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                    quis, sem. Nulla consequat massa quis enim.
+                  </p>
+                  <div class="features-grid">
+                    <div class="grid-row">
+                      <div class="grid-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/93023db15446316cdf1a60289cb5590461c3449f4a293265cdddf219a14d162c?placeholderIfAbsent=true&apiKey=d2796b4dc66740058c7029ff10552e35" class="feature-icon" alt="Feature icon"/>
+                        <h3 class="feature-title">Title Goes Here</h3>
+                        <p class="feature-description">
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                          Aenean commodo ligula eget dolor.
+                        </p>
+                      </div>
+                      <div class="grid-item">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/93023db15446316cdf1a60289cb5590461c3449f4a293265cdddf219a14d162c?placeholderIfAbsent=true&apiKey=d2796b4dc66740058c7029ff10552e35" class="feature-icon" alt="Feature icon"/>
+                        <h3 class="feature-title">Title Goes Here</h3>
+                        <p class="feature-description">
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                          Aenean commodo ligula eget dolor.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="features-content">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/895f0bf66c3f1608c3bc3eefcbb5c7aee69a21748b23388459d02865ee2392a1?placeholderIfAbsent=true&apiKey=d2796b4dc66740058c7029ff10552e35" class="features-image" alt="Features illustration"/>
+              </div>
+            </div>
+          </section>
+        </main>
+    
+        <footer class="footer">
+          <div class="footer-wrapper">
+            <div class="footer-top">
+              <span class="copyright">©2023 Yourcompany</span>
+              <span class="footer-logo">Landing</span>
+              <button class="footer-cta">Purchase now</button>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+              <div class="footer-links">
+                <a href="#home" class="footer-link">Home</a>
+                <a href="#about" class="footer-link">About</a>
+                <a href="#contact" class="footer-link">Contact</a>
+              </div>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/059bc617589e731c9d1439e22a293725184af6586b92e30b464c43b9b78f1b32?placeholderIfAbsent=true&apiKey=d2796b4dc66740058c7029ff10552e35" class="social-icon" alt=""/>
+                </a>
+                <a href="#" aria-label="Twitter">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9afe9b51cd9902c5603ab1fdbfc70652eaab62559c89f530549c8966f89c3fcc?placeholderIfAbsent=true&apiKey=d2796b4dc66740058c7029ff10552e35" class="social-icon" alt=""/>
+                </a>
+                <a href="#" aria-label="Instagram">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a011f043cafe718daf4a021afbc3f9864351bddd19b8d5f4bb5431a6db162f61?placeholderIfAbsent=true&apiKey=d2796b4dc66740058c7029ff10552e35" class="social-icon" alt=""/>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6f4688f945843e25e128522d06288b23af738d53178781fed6bd109aef06c1b0?placeholderIfAbsent=true&apiKey=d2796b4dc66740058c7029ff10552e35" class="social-icon" alt=""/>
+                </a>
+                <a href="#" aria-label="YouTube">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6cb97c394d21c4ed98780c30e41f5c8f30947a8f09e2bcbae212c7fea163bd84?placeholderIfAbsent=true&apiKey=d2796b4dc66740058c7029ff10552e35" class="social-icon" alt=""/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>

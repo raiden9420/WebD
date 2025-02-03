@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    background-color: black;
+}
+
+.main {
+    background-image: url("Assets/images/bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vw);
+    height: 70vh;
+    position: relative;
+}
+
+
+.main .box {
+    height: 70vh;
+    width: 100%;
+    opacity: 0.6;
+    background-color: black;
+    position: absolute;
+    top: 0;
+
+}
+
+nav {
+    display: flex;
+    max-width: 80vw;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+    height: 65px;
+}
+
+nav img {
+    width: 114px;
+    color: red;
+    position: relative;
+    z-index: 10;
+}
+
+nav button {
+    z-index: 10;
+    position: relative;
+    color: white;
+    background-color: transparent;
+    border: 0cap;
+    font-family: 'Martel Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+nav div :nth-child(2){
+    background-color: red;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.hero {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    font-family: 'Martel Sans', sans-serif;
+    gap: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+.hero div :nth-child(1){
+    background-color: transparent;
+    border: 0.1px solid white;
+    color: white;
+    padding: 12px 25px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.hero div :nth-child(2){
+    background-color: red;
+    color: white;
+    padding: 12px 25px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+
+.hero> :nth-child(1) {
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.hero> :nth-child(2) {
+    font-weight: 400;
+    font-size: 20px;
+}
+.hero> :nth-child(3) {
+    font-weight: 400;
+    font-size: 15px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* The specificity of this selector is 1  */
+        h1 {
+            color: aqua;
+            background-color: rgb(147, 41, 41);
+
+        }
+
+        /* The specificity of this selector is 10  */
+        .cpurple {
+            color: purple;
+        }
+
+        /* The specificity of this selector is 1 + 10 = 11  */
+        h1.yellow {
+            color: yellow;
+        }
+
+        /* This is an example of attribute selector. The specificity of this selector is 10 */
+        [data-x=a] {
+            color: maroon;
+        }
+
+        /* The specificity of this selector is 10  */
+        .cred {
+            color: red;
+        }
+
+        /* The specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41  */
+        a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;
+        }
+
+        .box {
+            width: 80vw;
+            height: auto;
+            margin: 20px auto;
+            /*background-color: aqua;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="yellow cred cpurple" data-x="a">CSS Specificity</h1>
+    </div>
+    <div>
+        <h2 class="cpurple">purple</h2>
+    </div>
+    <span class="box">
+        this is a box
+    </span>
+    <div class="box">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, deserunt iusto eius vero ipsum
+        nesciunt nam velit doloremque distinctio sint! Minima nihil accusamus expedita corporis voluptate itaque,
+        eveniet excepturi quia ducimus aliquam similique nisi culpa maiores dignissimos nostrum minus nemo enim et?
+        Incidunt, adipisci officiis magnam facilis eos molestiae nam? Labore cumque recusandae fugiat earum aliquam.
+    </div>
+</body>
+
+</html>

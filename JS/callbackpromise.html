@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function getData(){
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(455);
+                }, 6000);
+            });
+        }
+        async function main(){
+            console.log("Loading")
+            console.log("Loading...")
+            let data = await getData();
+            console.log(data);
+            console.log("Task2")
+        }
+        main()
+        
+    </script>
+</body>
+</html>
