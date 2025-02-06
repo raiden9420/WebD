@@ -5,12 +5,19 @@
   "name": "webd",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raiden9420/WebD.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raiden9420/WebD/issues"
+  },
+  "homepage": "https://github.com/raiden9420/WebD#readme",
   "description": ""
 }
